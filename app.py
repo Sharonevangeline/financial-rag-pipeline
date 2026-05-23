@@ -54,14 +54,16 @@ with st.sidebar:
 
 # ── Load vector store ─────────────────────────────────────────────────
 if "vector_store" not in st.session_state:
-    with st.spinner("Loading document index..."):
+    with st.spinner("Building document index — this takes 2-3 minutes on first run..."):
         try:
-            from ingest import load_vector_store, get_embeddings
-            embeddings = get_embeddings()
-            st.session_state["vector_store"] = load_vector_store(embeddings)
+            from ingest import ingest
+            st.session_state["vector_store"] = ingest(force_rebuild=True)
             st.success("Documents loaded and ready")
+        except FileNotFoundError as e:
+            st.error(str(e))
+            st.stop()
         except Exception as e:
-            st.error(f"Failed to load vector store: {e}")
+            st.error(f"Failed to load documents: {e}")
             st.stop()
 
 vector_store = st.session_state["vector_store"]
