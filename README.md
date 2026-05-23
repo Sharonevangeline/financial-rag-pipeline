@@ -18,13 +18,17 @@ A Retrieval Augmented Generation (RAG) system that enables natural language quer
 
 ## Screenshots
 
-### Sample questions interface
-![Sample questions](screenshots/HuggingFace.png)
+### Live on HuggingFace Spaces
+![HuggingFace](https://raw.githubusercontent.com/Sharonevangeline/financial-rag-pipeline/main/screenshots/HuggingFace.png)
 
 ### Answering a financial query with source citations
-![Answer with sources](screenshots/Answer.png)
-![Answer with sources](screenshots/Answer1.png)
-![Answer with sources](screenshots/Answer2.png)
+![Answer](https://raw.githubusercontent.com/Sharonevangeline/financial-rag-pipeline/main/screenshots/Answer.png)
+
+![Answer 1](https://raw.githubusercontent.com/Sharonevangeline/financial-rag-pipeline/main/screenshots/Answer1.png)
+
+![Answer 2](https://raw.githubusercontent.com/Sharonevangeline/financial-rag-pipeline/main/screenshots/Answer2.png)
+
+
 
 ## Problem Statement
 Financial analysts spend hours manually reading 200-page annual reports to extract key metrics, risks, and performance data. This RAG pipeline reduces that to seconds — a user types a question in plain English and receives a grounded answer with the exact source page cited.
