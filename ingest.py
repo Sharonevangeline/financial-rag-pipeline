@@ -10,7 +10,7 @@ from langchain_chroma import Chroma
 logger = logging.getLogger(__name__)
 
 CHROMA_PATH = "chroma_db"
-DATA_PATH   = "data"
+DATA_PATH   = "."
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
