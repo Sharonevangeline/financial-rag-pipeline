@@ -45,7 +45,7 @@ def get_answer_groq(question: str, context: str) -> str:
         client = Groq(api_key=os.getenv("GROQ_API_KEY"))
         prompt = build_prompt(question, context)
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.1,
             max_tokens=1024,
